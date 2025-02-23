@@ -1,0 +1,11 @@
+{% if model_list %}
+    <ul>
+    {% for mod in model_list %}
+        <li><a href="/ModelMarket/{{ mod.id }}">{{ mod.model_name }}</a>
+        <p>{{ mod.model_description }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No models are available.</p>
+{% endif %}
